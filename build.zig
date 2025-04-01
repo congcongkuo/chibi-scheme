@@ -18,6 +18,7 @@ pub fn build(b: *std.Build) void {
         .root_module = b.createModule(.{
             .target = target,
             .optimize = optimize,
+            .link_libc = true,
         }),
     });
 
@@ -85,6 +86,7 @@ pub fn build(b: *std.Build) void {
         .root_module = b.createModule(.{
             .target = target,
             .optimize = optimize,
+            .link_libc = true,
         }),
     });
 

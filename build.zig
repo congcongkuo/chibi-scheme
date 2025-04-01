@@ -4,7 +4,7 @@ const builtin = @import("builtin");
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    const upstream = b.dependency("lz4", .{});
+    const upstream = b.dependency("chibi", .{});
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
     const t = target.result;

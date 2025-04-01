@@ -10,6 +10,7 @@ pub fn build(b: *std.Build) void {
     const t = target.result;
 
     const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode") orelse .dynamic;
+    if(t.os.tag == .windows) {linkage = .static;}
     const ulimit = b.option(bool, "ulimit", "ulimit") orelse false;
 
     const libchibi = b.addLibrary(.{

@@ -1,0 +1,16 @@
+.{
+    .name = .lz4,
+    .version = "1.10.0-4",
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{
+        .lz4 = .{
+            .url = "git+https://github.com/ashinn/chibi-scheme.git#af1bc5806d9ae41ebcbf7a401404ee7e83ed6519",
+            .hash = "N-V-__8AALsyWAAXzD0WD0OaWHS1CwNfADKQXZgz7JGqRKWZ",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+    },
+    .fingerprint = 0x4ae88e9f0a2aa4c5,
+}

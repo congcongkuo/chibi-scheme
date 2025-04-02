@@ -9,8 +9,8 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
     const t = target.result;
 
-    var linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode") orelse .dynamic;
-    if(t.os.tag == .windows) {linkage = .static;}
+    const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode") orelse .dynamic;
+    //if(t.os.tag == .windows) {linkage = .static;}
     const ulimit = b.option(bool, "ulimit", "ulimit") orelse false;
 
     const libchibi = b.addLibrary(.{
@@ -87,7 +87,7 @@ pub fn build(b: *std.Build) void {
         .root_module = b.createModule(.{
             .target = target,
             .optimize = optimize,
-            .link_libc = true,
+            //.link_libc = true,
         }),
     });
 
